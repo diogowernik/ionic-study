@@ -33,12 +33,12 @@ angular.module('brasilia', ['ionic', 'brasilia.controllers', 'brasilia.services'
 
   // Each tab has its own nav history stack:
 
-  .state('tab.dash', {
-    url: '/dash',
+  .state('tab.search', {
+    url: '/encontrar',
     views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+      'tab-search': {
+        templateUrl: 'templates/search.html',
+        controller: 'SearchCtrl'
       }
     }
   })
@@ -73,6 +73,6 @@ angular.module('brasilia', ['ionic', 'brasilia.controllers', 'brasilia.services'
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/tab/encontrar');
 
 });
