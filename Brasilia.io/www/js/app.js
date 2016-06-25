@@ -44,23 +44,14 @@ angular.module('brasilia', ['ionic', 'brasilia.controllers', 'brasilia.services'
   })
 
   .state('tab.chats', {
-      url: '/chats',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
-        }
+    url: '/mensagens',
+    views: {
+      'tab-chats': {
+        templateUrl: 'templates/chats.html',
+        controller: 'ChatCtrl'
       }
-    })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
-      }
-    })
+    }
+  })
 
   .state('tab.account', {
     url: '/account',
