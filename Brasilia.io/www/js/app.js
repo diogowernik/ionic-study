@@ -18,10 +18,6 @@ angular.module('brasilia', ['ionic', 'brasilia.controllers', 'brasilia.services'
 
 .config(function($stateProvider, $urlRouterProvider) {
 
-  // Ionic uses AngularUI Router which uses the concept of states
-  // Learn more here: https://github.com/angular-ui/ui-router
-  // Set up the various states which the app can be in.
-  // Each state's controller can be found in controllers.js
   $stateProvider
 
   // setup an abstract state for the tabs directive
@@ -30,8 +26,6 @@ angular.module('brasilia', ['ionic', 'brasilia.controllers', 'brasilia.services'
     abstract: true,
     templateUrl: 'templates/tabs.html'
   })
-
-  // Each tab has its own nav history stack:
 
   .state('tab.search', {
     url: '/encontrar',
@@ -54,10 +48,10 @@ angular.module('brasilia', ['ionic', 'brasilia.controllers', 'brasilia.services'
   })
 
   .state('tab.account', {
-    url: '/account',
+    url: '/minha-conta',
     views: {
       'tab-account': {
-        templateUrl: 'templates/tab-account.html',
+        templateUrl: 'templates/account.html',
         controller: 'AccountCtrl'
       }
     }
