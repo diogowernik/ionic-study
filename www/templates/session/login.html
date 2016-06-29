@@ -1,0 +1,47 @@
+<ion-view view-title="Login">
+  <ion-content class="padding">
+    <center>
+      <p>FAÇA LOGIN PARA CONTINUAR</p>
+      <button
+        ng-click="authenticate('facebook')"
+        class="button icon button-positive ion-social-facebook">
+      </button>
+      <button
+        ng-click="authenticate('google-oauth2')"
+        class="button icon button-assertive ion-social-googleplus">
+      </button>
+    </center>
+
+    <div class="list list-inset">
+      <p>
+      <label class="item item-input">
+        <i class="icon ion-email placeholder-icon"></i>
+        <input type="text" ng-model="email" placeholder="Email">
+      </label>
+      <label class="item item-input">
+        <i class="icon ion-locked placeholder-icon"></i>
+        <input
+          type="password"
+          ng-model="password"
+          placeholder="Senha"
+          class="form-control">
+        </input>
+      </label>
+      </p>
+      <span class="right">
+        <a href="#" class="subdued">Esqueci minha senha</a>
+      </span>
+    </div>
+
+    <button
+      class="button button-full button-positive"
+      ng-click="login()">
+      Entrar
+    </button>
+    <button
+      class="button button-full button-stable"
+      ng-click="signUp()">
+      Criar Conta
+    </button>
+  </ion-content>
+</ion-view>
