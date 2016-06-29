@@ -1,4 +1,9 @@
-angular.module('brasilia', ['ionic', 'brasilia.controllers', 'brasilia.services'])
+angular.module('brasilia', [
+    'ionic',
+    'brasilia.controllers',
+    'brasilia.services',
+    'ng-token-auth'
+])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
