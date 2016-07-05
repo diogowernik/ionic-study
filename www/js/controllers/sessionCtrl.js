@@ -22,6 +22,5 @@ angular.module('brasilia.controllers')
       console.error(response);
     });
 
-  };
 
 });
