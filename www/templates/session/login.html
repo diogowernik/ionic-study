@@ -7,27 +7,41 @@
         class="button icon button-positive ion-social-facebook">
       </button>
       <button
-        ng-click="authenticate('google-oauth2')"
+        ng-click="authenticate('google')"
         class="button icon button-assertive ion-social-googleplus">
       </button>
     </center>
 
     <div class="list list-inset">
-      <p>
+
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Portal
+        </div>
+        <select
+          ng-options="subdomain.title for subdomain in data.availableDomains track by subdomain.id"
+          ng-model="data.selectedDomain">
+        </select>
+      </label>
+
       <label class="item item-input">
         <i class="icon ion-email placeholder-icon"></i>
-        <input type="text" ng-model="email" placeholder="Email">
+        <input
+          type="text"
+          ng-model="user.email"
+          placeholder="Email">
       </label>
+
       <label class="item item-input">
         <i class="icon ion-locked placeholder-icon"></i>
         <input
           type="password"
-          ng-model="password"
+          ng-model="user.password"
           placeholder="Senha"
           class="form-control">
         </input>
       </label>
-      </p>
+      <br>
       <span class="right">
         <a href="#" class="subdued">Esqueci minha senha</a>
       </span>
